@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)https://s0.2mdn.net/sadbundle/14118978511881758948/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="ad.size" content="width=728,height=90">
+	<script type="text/javascript">
+		var clickTag = "http://www.google.com";
+	</script>
+<style>
+/* reset */
+
+html, body, object, img {
+    margin: 0;
+    padding: 0;
+	}
+
+a:active, a:hover { outline: 0; }
+img { border: 0; }
+
+/* structure */
+
+#content{
+	width: 728px;
+	height: 90px;
+	overflow: hidden;
+	/*overflow: visible;*/
+	position: relative;
+	background: url(background_1.jpg) 0px 0px no-repeat;
+	}
+
+#border{
+	position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 726px;
+    height: 88px;
+    overflow: hidden;
+    display: block;
+    border: 1px solid #999999;
+	z-index: 991;
+}
+
+/* elements */
+
+#overlay, #bg1, #bg2, #bg3, #bg4, #logo, #copy1, #copy2, #copy3, #copy4, #cta, #slider, #legal-1, #legal-2, #legal-open {
+    width: 728px;
+	height: 90px;
+	display: block;
+	opacity: 0;
+	position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+	}
+
+#overlay{ z-index: 990; opacity: 0; background: #003c71;}
+
+#logo{ background: url(logo.png) 0 0 no-repeat; z-index: 991; opacity: 1;}
+
+#copy1{ background: url(copy1.png) 0px 0px no-repeat; width: 414px; opacity: 1; z-index: 130; }
+#copy2{ background: url(copy2.png) 0px 0px no-repeat; width: 414px; opacity: 1; left: -728px; z-index: 130; }
+#copy3{ background: url(copy3.png) 0px 0px no-repeat; opacity: 1; left: -728px; z-index: 235; }
+#copy4{ background: url(copy4.png) 0px 0px no-repeat; opacity: 1; left: -728px; z-index: 235; }
+
+#slider{ background: url(slider.png) 0px 0px no-repeat; opacity: 1; left: 84px; z-index: 230; }
+
+#cta{ background: url(cta.png) 0px 0px no-repeat; opacity: 0; z-index: 208; }
+
+#bg1{ background: url(background_1.jpg) 0px 0px no-repeat; height: 230px; opacity: 1; z-index: 101; }
+#bg2{ background: url(background_2.jpg) 0px 0px no-repeat; height: 230px; opacity: 1; width: 84px; z-index: 102; }
+
+#bg4{ background: url(background_3.jpg) 0px 0px no-repeat; opacity: 0; z-index: 104; }
+
+#bg3{
+    width: 728px;
+	height: 90px;
+	display: block;
+	opacity: 0;
+	position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 103;
+	background: url(background_3.jpg) 0 0 no-repeat;
+	-webkit-transform: scale(0.5) translate(-376px,5px);
+	-moz-transform: scale(0.5) translate(-376px,5px);
+	-ms-transform: scale(0.5) translate(-376px,5px);
+	-o-transform: scale(0.5) translate(-376px,5px);
+	transform: scale(0.5) translate(-376px,5px);
+}
+
+#bgHolder{
+	width: 728px;
+	height: 90px;
+	display: block;
+	position: absolute;
+	overflow: hidden;
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+    z-index: 100;
+}
+
+#copyHolder{
+	width: 414px;
+	height: 90px;
+	display: block;
+	position: absolute;
+	overflow: hidden;
+    top: 0px;
+    left: 314px;
+    opacity: 1;
+    z-index: 100;
+}
+
+#legal-1{
+	top: 0;
+	left: 0;
+	z-index: 999;
+	opacity: 0;
+	background: url(legal_1.png) 0px 0px no-repeat;
+	}
+
+#legal-2{
+	top: 0;
+	left: 0;
+	z-index: 989;
+	opacity: 0;
+	background: url(legal_2.png) 0 0 no-repeat;
+	}
+
+#legal-open{
+    position: absolute;
+    width: 112px;
+    height: 21px;
+    top: 69px;
+    left: 135px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 9999;
+	display: none;
+    }
+
+/*#legal-clickthrough{
+    position: absolute;
+    width: 130px;
+    height: 15px;
+    top: 130px;
+    left: 137px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 9999;
+    display: none;
+    }
+*/
+a.click-through{
+     position: absolute;
+     width: 728px;
+     height: 90px;
+     top: 0px;
+     left: 0px;
+     cursor: pointer;
+     opacity: 0;
+     z-index: 999;
+     background: #ffffff;
+}
+
+
+.show{
+	display: block !important;
+	}
+
+/* Animations */
+
+.animClass {
+	-webkit-transform: translate3d(0, 0, 0); /* Force Hardware Acceleration */
+}
+	
+/* transitions */	
+
+.transition-1{
+	-webkit-transition: all 0.53s ease-out;
+	-ms-transition: all 0.53s ease-out;
+	-moz-transition: all 0.53s ease-out;
+	transition: all 0.53s ease-out;
+	
+	-webkit-transition: all 0.53s cubic-bezier(.26,1.03,.34,.96);
+	-ms-transition: all 0.53s cubic-bezier(.26,1.03,.34,.96);
+	-moz-transition: all 0.53s cubic-bezier(.26,1.03,.34,.96);
+	transition: all 0.53s cubic-bezier(.26,1.03,.34,.96);
+}
+
+.transition-2{
+	-webkit-transition: all 0.5s ease-in;
+	-ms-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out ;
+	transition: all 0.5s ease-out ;
+		
+	-webkit-transition: all 0.5s cubic-bezier(.27,1.04,.46,1.08);
+	-ms-transition: all 0.5s cubic-bezier(.27,1.04,.46,1.083);
+	-moz-transition: all 0.5s cubic-bezier(.27,1.04,.46,1.08);
+	transition: all 0.5s cubic-bezier(.27,1.04,.46,1.08);
+}
+
+.transition-3{
+	-webkit-transition: all 0.9s ease-out;
+	-ms-transition: all 0.9s ease-out;
+	-moz-transition: all 0.9s ease-out;
+	transition: all 0.9s ease-out;
+}
+
+.transition-4{
+	-webkit-transition: all 1s ease-out;
+	-ms-transition: all 1s ease-out;
+	-moz-transition: all 1s ease-out;
+	transition: all 1s ease-out;
+}
+
+.transition-5{
+	-webkit-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.transition-6{
+	-webkit-transition: all 1.1s ease-in-out;
+	-ms-transition: all 1.1s ease-in-out;
+	-moz-transition: all 1.1s ease-in-out ;
+	transition: all 1.1s ease-in-out ;
+		
+	-webkit-transition: all 1.1s cubic-bezier(.42,0,.58,1);
+	-ms-transition: all 1.1s cubic-bezier(.42,0,.58,1);
+	-moz-transition: all 1.1s cubic-bezier(.42,0,.58,1);
+	transition: all 1.1s cubic-bezier(.42,0,.58,1);
+}
+
+/* functions */
+
+.bgUp{
+	-webkit-transform: translate(0px,-140px) rotate(0.01deg) !important;
+	-moz-transform: translate(0px,-140px) rotate(0.01deg) !important;
+	-ms-transform: translate(0px,-140px) rotate(0.01deg) !important;
+	-o-transform: translate(0px,-140px) rotate(0.01deg) !important;
+	transform: translate(0px,-140px) rotate(0.01deg) !important;
+}
+
+.bgScale{
+	-webkit-transform: translate(376px,-6px) scale(2.03) rotate(0.01deg) !important;
+	-moz-transform: translate(376px,-6px) scale(2.03) rotate(0.01deg) !important;
+	-ms-transform: translate(376px,-6px) scale(2.03) rotate(0.01deg) !important;
+	-o-transform: translate(376px,-6px) scale(2.03) rotate(0.01deg) !important;
+	transform: translate(376px,-6px) scale(2.03) rotate(0.01deg) !important;
+}
+
+.sliderRight{
+	-webkit-transform: translate(168px,0px) rotate(0.01deg) !important;
+	-moz-transform: translate(168px,0px) rotate(0.01deg) !important;
+	-ms-transform: translate(168px,0px) rotate(0.01deg) !important;
+	-o-transform: translate(168px,0px) rotate(0.01deg) !important;
+	transform: translate(168px,0px) rotate(0.01deg) !important;
+}
+
+.right{
+	-webkit-transform: translate(728px,0px) rotate(0.01deg) !important;
+	-moz-transform: translate(728px,0px) rotate(0.01deg) !important;
+	-ms-transform: translate(728px,0px) rotate(0.01deg) !important;
+	-o-transform: translate(728px,0px) rotate(0.01deg) !important;
+	transform: translate(728px,0px) rotate(0.01deg) !important;
+}
+
+.righter{
+	-webkit-transform: translate(90px,0px) rotate(0.01deg) !important;
+	-moz-transform: translate(90px,0px) rotate(0.01deg) !important;
+	-ms-transform: translate(90px,0px) rotate(0.01deg) !important;
+	-o-transform: translate(90px,0px) rotate(0.01deg) !important;
+	transform: translate(90px,0px) rotate(0.01deg) !important;
+}
+
+.left{
+	-webkit-transform: translate(-200px,0px) rotate(0.01deg) !important;
+	-moz-transform: translate(-200px,0px) rotate(0.01deg) !important;
+	-ms-transform: translate(-200px,0px) rotate(0.01deg) !important;
+	-o-transform: translate(-200px,0px) rotate(0.01deg) !important;
+	transform: translate(-200px,0px) rotate(0.01deg) !important;
+}
+
+/* fades */
+
+.fade-in{ opacity: 1 !important; }
+
+.fade-half{ opacity: 0.8 !important; }
+
+.fade-out{ opacity: 0 !important; }
+
+/* keyframes */
+
+.copyAnim{
+	animation-duration: 1s;
+	animation-iteration-count: 1;/*number of loops*/
+	animation-timing-function: ease-out;
+	animation-name: anim1;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+
+	-webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-name: anim1;
+	-webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+
+    -moz-animation-duration: 1s;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: ease-out;
+    -moz-animation-name: anim1;
+	-moz-animation-direction: normal;
+    -moz-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes anim1 {
+	0%      { width: 84px; !important; }	
+	100%    { width: 252px;  !important;}
+}
+
+@keyframes anim1 {
+	0%      { width: 84px; !important; }	
+	100%    { width: 252px;  !important;}
+}
+
+@-moz-keyframes anim1 {
+	0%      { width: 84px;  !important;}	
+	100%    { width: 252px; !important; }
+}
+
+</style>
+<script type="text/javascript">
+init = function(){
+   setTimeout(function(){
+	   allAnimations();
+   }, 200);
+}
+
+function allAnimations() {
+
+    var animCount = 0;
+    var animTimer = setInterval(function(){ theTimer() }, 50),
+
+		logo = document.getElementById('logo'),
+		overlay = document.getElementById('overlay'),
+
+		bgHolder = document.getElementById('bgHolder'),
+		bg1 = document.getElementById('bg1'),
+		bg2 = document.getElementById('bg2'),
+		bg3 = document.getElementById('bg3'),
+		bg4 = document.getElementById('bg4'),
+
+		slider = document.getElementById('slider'),
+		
+		copy1 = document.getElementById('copy1'),
+		copy2 = document.getElementById('copy2'),
+		copy3 = document.getElementById('copy3'),
+		copy4 = document.getElementById('copy4'),
+
+		cta = document.getElementById('cta');
+	
+		var legal1 = document.getElementById('legal-1');
+		var legal2 = document.getElementById('legal-2');
+		var legalOpen = document.getElementById('legal-open');
+		/*var legalClick = document.getElementById('legal-clickthrough');*/
+		var legalVis = false;
+
+	//  timings
+
+	function theTimer(){
+		if(animCount == 30){
+			bg1.setAttribute('class', 'transition-6 bgUp');
+			bg2.setAttribute('class', 'transition-6 bgUp');
+			
+		} else if(animCount == 60){
+			bg2.setAttribute('class', 'bgUp copyAnim');
+			slider.setAttribute('class', 'transition-4 sliderRight');
+			copy1.setAttribute('class', 'transition-2 right');
+			
+		} else if(animCount == 67){
+			
+			copy2.setAttribute('class', 'transition-2 right');
+			
+		} else if(animCount == 125){
+			
+			bgHolder.setAttribute('class', 'transition-1 bgScale');
+
+		} else if(animCount == 126){
+			
+			copy2.setAttribute('class', 'transition-2 right fade-out');
+			bg3.setAttribute('class', 'fade-in');
+			
+		} else if(animCount == 128){
+			bg4.setAttribute('class', 'fade-in');
+
+		} else if(animCount == 130){
+			
+			cta.setAttribute('class', 'transition-2 fade-in');
+			copy3.setAttribute('class', 'transition-2 right');
+			
+		} else if(animCount == 200){	
+			
+			copy4.setAttribute('class', 'transition-2 right');
+			copy3.setAttribute('class', 'transition-2 right righter');
+			legalOpen.style.display="block"
+			legal2.setAttribute('class', 'transition-2 fade-in');
+        }
+        else if(animCount == 300){
+            clearInterval(animTimer);
+		} animCount++;
+	}
+	
+	//  legal stuff
+
+	legalOpen.addEventListener('mouseover', showLegal);
+	legalOpen.addEventListener('mouseleave', hideLegal);
+
+	function showLegal(){
+		legal1.setAttribute('class', 'transition-5 fade-in');
+		overlay.setAttribute('class', 'transition-5 fade-half');
+	}
+	
+	function hideLegal(){
+		legal1.setAttribute('class', 'transition-5');
+		overlay.setAttribute('class', 'transition-5');
+	}
+}</script>
+<script type="text/javascript">
+    
+  (function() {
+    var MAX_URL_PARAM_LENGTH = 34;
+    var CLICK_X_URL_KEY = 'nx';
+    var CLICK_Y_URL_KEY = 'ny';
+    var CREATIVE_DIMENSIONS_KEY = 'dim';
+    var AD_URL_PARAM = '&adurl=';
+
+    var relegateNavigation = '';
+    var urlParamMap = {};
+
+    urlParamMap[CLICK_X_URL_KEY] = null;
+    urlParamMap[CLICK_Y_URL_KEY] = null;
+    urlParamMap[CREATIVE_DIMENSIONS_KEY] = null;
+
+    var handleClickTagMessage = function(e) {
+      try {
+        var eventData = JSON.parse(e.data);
+      } catch (err) {
+        return;
+      }
+      if (eventData.isInitClickTag) {
+        if (eventData.clickTags) {
+          for (var i = 0; i < eventData.clickTags.length; i++) {
+            var clkTag = eventData.clickTags[i];
+            window[clkTag.name] = clkTag.url;
+          }
+        } else if (eventData.clickTag) {
+          window.clickTag = eventData.clickTag;
+        }
+        relegateNavigation = eventData.relegateNavigation;
+      }
+    };
+
+    var storeClickCoordinates = function(e) {
+      urlParamMap[CLICK_X_URL_KEY] = Math.round(e.clientX);
+      urlParamMap[CLICK_Y_URL_KEY] = Math.round(e.clientY);
+    };
+
+    var getCreativeDimensions = function() {
+      return window.innerWidth + 'x' + window.innerHeight;
+    }
+
+    var getExitClickParams = function(e) {
+      urlParamMap[CREATIVE_DIMENSIONS_KEY] = getCreativeDimensions();
+
+      var exitParams = '';
+      for (var key in urlParamMap) {
+        exitParams += '&' + key + '=';
+        if (urlParamMap[key] !== null) {
+          exitParams += urlParamMap[key];
+        }
+      }
+      return exitParams;
+    }
+
+    var appendExitClickParams = function(url) {
+      var adUrlIndex = url.toLowerCase().indexOf(AD_URL_PARAM);
+      var paramsToBeAdded = getExitClickParams();
+      if (adUrlIndex > -1 && paramsToBeAdded.length <= MAX_URL_PARAM_LENGTH) {
+        url = url.substr(0, adUrlIndex) + paramsToBeAdded +
+          url.substr(adUrlIndex);
+      };
+      return url;
+    };
+
+    if (open.call) {
+      window.open = function(open) {
+        return function(url, name, features) {
+          url = appendExitClickParams(url);
+          if (relegateNavigation === 'parent') {
+            var message = {'clickTag': url, 'isPostClickTag': true};
+            parent.postMessage(JSON.stringify(message), '*');
+          } else {
+            var args = [url, name];
+            if (features) {
+              args.push(features);
+            }
+            open.apply(window, args);
+          }
+        };
+      }(window.open);
+    }
+
+    if (window.addEventListener) {
+      window.addEventListener(
+          'message', handleClickTagMessage, false);
+      window.addEventListener('mousedown', storeClickCoordinates, true);
+    } else {
+      window.attachEvent('onmessage', handleClickTagMessage);
+    }
+  })();
+    
+  </script></head>
+<body onload="init()">
+	<div id="content">
+			<div class="animClass">
+				<div id="logo"></div>
+				<div id="overlay"></div>
+				<div id="bgHolder" class="transition-1 bgScale">
+                	<div id="bg1" class="transition-6 bgUp"></div>
+					<div id="bg2" class="bgUp copyAnim"></div>
+					<div id="bg3" class="fade-in"></div> 
+					<div id="slider" class="transition-4 sliderRight"></div>
+				</div>
+				<div id="bg4" class="fade-in"></div>
+				<div id="copyHolder">
+					<div id="copy1" class="transition-2 right"></div>
+					<div id="copy2" class="transition-2 right fade-out"></div>
+				</div>
+				<div id="copy3" class="transition-2 right righter"></div>
+				<div id="copy4" class="transition-2 right"></div>
+				<div id="cta" class="transition-2 fade-in"></div>
+				<div id="cta"></div>
+				<div id="legal-1"></div>	
+				<div id="legal-2" class="transition-2 fade-in"></div>
+				<div id="border"></div>
+				<div id="legal-open" style="display: block;"></div>
+				<div id="legal-clickthrough"></div>
+			<a id="btn" class="click-through" href="javascript:window.open(window.clickTag)"></a>​
+			</div>
+	</div><!-- #content -->
+
+
+</body></html>

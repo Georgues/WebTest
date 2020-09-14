@@ -1,0 +1,376 @@
+<!doctype html>
+<html>
+	<head>
+		<title>BBC</title>
+
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <style>
+        
+            #topbar{
+                width: 1200px;
+                height: 43px;
+                background-color: #FFFFFF;
+                margin: 0 auto;
+            }
+            
+            body{
+                margin: 0;
+                padding: 0;
+                font-family: 'Helvetica', 'Arial', sans-serif;
+            }
+            
+            #logo{
+                margin-top: 10px;
+                margin-right: 10px;
+                width: 80px;
+                float: left;
+                padding-left: 10px;
+            }
+            
+            .topbar-section{
+                float: left;
+                border-left: 1px #CCCCCC solid;
+                height: 100%;
+            }
+            
+            .topbar-menu{
+                font-weight:bolder;
+                font-size: 90%;
+                padding: 14px 20px;
+                height: 15px;
+            }
+            
+            .clear{
+                clear: both;
+            }
+            
+            #search-box{
+                background-color: #E4E4E4;
+                margin: 9px;
+                margin-right: 0px;
+                border: none;
+                font-weight: bold;
+                float: left;
+                height: 20px;
+            }
+            
+            #lupa-img{
+                margin-left: 0px;
+                margin-top: 9px;
+                height: 22px;
+            }
+            
+            #down-arrow{
+                width: 16px;
+                margin-left: 10px;
+
+            }
+            
+            #signin-image{
+                width: 30px;
+                margin: 8px 10px;
+                float: left;
+                margin-right: 0px;
+            }
+            
+            #menu-bar-container{
+                border-top: 1px #CCCCCC solid;
+                width: 100%;
+                background-color: #BB1919;
+                height: 65px;
+                padding: 0;
+                margin: 0;
+            }
+            
+            #menu-bar{
+                padding: 0;
+                margin: 0;
+                width: 1200px;
+                margin: 0 auto;
+            }
+            
+            #menu-bar-2-container{
+                width: 100%;
+                margin: 0 auto;
+                height: 30px;
+                background-color: #BB1919
+            }
+            
+            #menu-bar-2{
+                width:1200px;
+                margin:0 auto;
+                height:40px;
+            }
+            
+            #menu-bar-2 a{
+                color: white;
+                text-decoration: none;
+                border-right: 1px solid #BB4545;
+                font-size: 14px;
+                padding: 2px 9px;
+            }
+            
+            #menu-bar-2 a:hover{
+                text-decoration: underline
+            }
+            
+            #down-arrow-2{
+                padding: 0;
+                width: 12px;
+                position:relative;
+                top: -2px;
+                left: -7px;
+            }
+            
+            h1{
+                padding-left: 10px;
+                margin: 0;
+                color: white;
+                font-weight: normal;
+                font-size: 40px;
+                padding-top:7px;
+            }
+            
+            .no-border{
+                border: none !important;
+            }
+            
+            #page-container{
+                width: 1200px;
+                margin: 0 auto;
+            }
+            
+            h2{
+/*                padding-left: 10px;*/
+                color: #150B0A;
+                font-weight: normal;
+                border-bottom: 3px solid #A91717;
+                width: 54px;
+                margin-left: 10px;
+            }
+            
+            #signin-text {
+                font-weight: bold;
+                font-size:90%;
+                position:relative;
+                top:14px;
+                padding-right:90px;
+            }
+            
+            #main-article-img{
+                width: 500px;
+                padding-left: 10px;
+                float: left;
+            }
+            
+            #article-container{
+                width: 500px;
+                color: #5a5a5a;
+                font-size: 14px;
+            }
+            
+            h3 a{
+                color:black;
+                font-size: 26px;
+                float: left;
+                padding-left: 10px;
+                text-decoration: none;
+                padding-bottom: 10px;
+            }
+            
+            h3 a:hover{
+                color: #1167a8;
+                text-decoration: underline;
+            }
+            
+            .simple-text{
+                color: #5a5a5a;
+                padding-left: 10px;
+                font-size: 14px;
+            }
+            
+            #clock{
+                width: 15px;
+                padding-left: 10px;
+                position: relative;
+                top:3px;
+                padding-right: 3px;
+            }
+            
+            #article-container a{
+                color: black;
+                text-decoration: none;
+            }
+            
+            #article-container a:hover{
+                color: #1167a8;
+                text-decoration: underline;
+            }
+            
+            #two-links{
+                position: relative;
+                left: 6px;
+                top: 20px;
+            }
+            
+            #two-links p{
+                font-size: 16px;
+                font-weight: bold;
+                margin: 5px;
+            }
+            
+        </style>
+	  
+	</head>
+
+	<body>
+
+        <div id="topbar">
+            <img id="logo" src="bbc.png">
+            
+            <div id="signin" class="topbar-section">
+                
+                <img src="signin.png" id="signin-image">
+                <span id="signin-text">Sign in</span>
+                
+            </div>
+            
+            <div class="topbar-section topbar-menu">
+            
+                News 
+                
+            </div>
+            
+            <div class="topbar-section topbar-menu">
+            
+                Sport 
+                
+            </div>
+            
+            <div class="topbar-section topbar-menu">
+            
+                Rell 
+                
+            </div>
+            
+            <div class="topbar-section topbar-menu">
+            
+                Worklife
+                
+            </div>
+            
+            <div class="topbar-section topbar-menu">
+            
+                Travel 
+                
+            </div>
+            
+            <div class="topbar-section topbar-menu">
+            
+                Future
+                
+            </div>
+            
+            <div class="topbar-section topbar-menu">
+            
+                Culture
+                
+            </div>
+            
+            <div class="topbar-section topbar-menu">
+            
+                 More 
+                
+                <img id="down-arrow" src="arrow.png">
+                
+            </div>
+            
+            <div  class="topbar-section">
+            
+                <input type="text" id="search-box"  placeholder="Search">
+                <input type="image" src="lupa.png" id="lupa-img">
+                
+            </div>
+            
+        </div>
+        
+        <div class="clear"></div>
+        
+        <div id="menu-bar-container">
+            
+            <div id="menu-bar">
+                
+                <h1>NEWS</h1>
+            
+            </div>
+                
+        </div>
+        
+        <div class="clear"></div>
+        
+        <div id="menu-bar-2-container">
+        
+            <div id="menu-bar-2">
+            
+                <a href="">Home</a>
+                <a href="">US Election</a>
+                <a href="">Coronavirus</a>
+                <a href="">Video</a>
+                <a href="">World</a>
+                <a href="">UK</a>
+                <a href="">Business</a>
+                <a href="">Tech</a>
+                <a href="">Science</a>
+                <a href="">Stories</a>
+                <a href="">Entertainment & Arts</a>
+                <a href="">Health</a>
+                <a href="">World News TV</a>
+                <a href="">In Pictures</a>
+                <a href="" class="no-border">More</a>
+                <img src="down-arrow.png" id="down-arrow-2">
+                
+            </div>
+                    
+        </div>
+
+		
+        <div id="page-container">
+        
+            <div id="main-article">
+            
+                <h2>Tech</h2>
+                
+                <div id="article-container">
+                
+                    <img id="main-article-img" src="facebook.jpg">
+                    
+                    <p><h3><a href="https://www.bbc.com/news/technology-54086598">Facebook 'profits from hate' claims ex-engineer</a></h3></p>
+                    
+                    <p class="simple-text">But the social network defends its record and denies the claims.</p>
+                
+                    <p>
+                
+                        <img src="clock.png" id="clock">5h | <a href="https://www.bbc.com/news/technology">Technology</a>
+                
+                    </p>
+                    <span id="two-links">
+                    <p>
+                        <a href="https://www.bbc.com/news/technology-53225139">• Could a boycott kill Facebook?</a>
+                    </p>
+                    <p>
+                        <a href="https://www.bbc.com/news/technology-53849295">• QAnon: Facebook takes action on conspiracy groups</a>
+                    </p>
+                    </span>
+                
+                </div>
+            
+            </div>
+            
+        </div>
+        
+	</body>
+	
+</html>
